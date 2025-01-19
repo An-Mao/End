@@ -1,0 +1,134 @@
+{
+  "message.ned.invasion.pre": "================================&newLine Invasion Day &newLine Start Time:{0} &newLine Duration Time:{1} &newLine Waves:{2}",
+  "message.ned.invasion.start": "Invasion Start&newLineThe first wave is coming soon",
+  "message.ned.invasion.error_stop": "Invasion Error Stop",
+  "message.ned.invasion.stop": "Invasion Stop",
+  "message.ned.invasion.wave": "Now wave : {0} ",
+
+  "effect.ned.fetters": "fetters",
+  "effect.ned.chao": "chao",
+
+
+  "skill.ned.alone": "Alone",
+  "skill.ned.bomb": "Bomb",
+  "skill.ned.chao": "Chao",
+  "skill.ned.chase_away": "Chase Away",
+  "skill.ned.cohesion": "Cohesion",
+  "skill.ned.cold_shield": "Cold Shield",
+  "skill.ned.comprehend": "Comprehend",
+  "skill.ned.conductivity": "Conductivity",
+  "skill.ned.corrosion": "Corrosion",
+  "skill.ned.counterstrike": "Counterstrike",
+  "skill.ned.crystallography": "Crystallography",
+  "skill.ned.curse": "Curse",
+  "skill.ned.dark_poison_shield": "Dark Poison Shield",
+  "skill.ned.dark_position": "Dark Position",
+  "skill.ned.dexterity": "Dexterity",
+  "skill.ned.disappear": "Disappear",
+  "skill.ned.dislike": "Dislike",
+  "skill.ned.energy_shield": "Energy Shield",
+  "skill.ned.fast": "Fast",
+  "skill.ned.favorite": "Favorite",
+  "skill.ned.fetters": "Fetters",
+  "skill.ned.fire_barrier": "Fire Barrier",
+  "skill.ned.frostbite": "Frostbite",
+  "skill.ned.frost_trail": "FrostTrail",
+  "skill.ned.high_frequency_boundary": "High Frequency Boundary",
+  "skill.ned.ignite": "Ignite",
+  "skill.ned.imperishable": "Imperishable",
+  "skill.ned.infection": "Infection",
+  "skill.ned.interruption_of_growth": "Interruption Of Growth",
+  "skill.ned.intrinsic_quality": "Intrinsic Quality",
+  "skill.ned.ironclad": "Ironclad",
+  "skill.ned.leaders": "Leaders",
+  "skill.ned.learn": "Learn",
+  "skill.ned.left_guardian": "Left Guardian",
+  "skill.ned.life_absorbing": "Life Absorbing",
+  "skill.ned.low_frequency_boundary": "Low Frequency Boundary",
+  "skill.ned.mirroring": "Mirroring",
+  "skill.ned.newborn": "Newborn",
+  "skill.ned.nightmare_memory": "Nightmare Memory",
+  "skill.ned.order": "Order",
+  "skill.ned.poisoned_egg": "Poisoned Egg",
+  "skill.ned.poison_mist": "Poison Mist",
+  "skill.ned.powerful": "Powerful",
+  "skill.ned.proliferate": "Proliferate",
+  "skill.ned.rainbow_position": "Rainbow Position",
+  "skill.ned.rebirth": "Rebirth",
+  "skill.ned.recover": "Recover",
+  "skill.ned.reincarnation": "Reincarnation",
+  "skill.ned.repulse": "Repulse",
+  "skill.ned.resistant": "Resistant",
+  "skill.ned.reverse_entropy": "Reverse Entropy",
+  "skill.ned.right_blessing": "Right Blessing",
+  "skill.ned.searing_shield": "Searing Shield",
+  "skill.ned.sense_of_competition": "Sense Of Competition",
+  "skill.ned.shield_of_chaos": "Shield Of Chaos",
+  "skill.ned.shield_of_purity": "Shield Of Purity",
+  "skill.ned.steadfastness": "Steadfastness",
+  "skill.ned.steal": "Steal",
+  "skill.ned.subtotal": "Subtotal",
+  "skill.ned.summon": "Summon",
+  "skill.ned.swirl": "Swirl",
+  "skill.ned.symbiosis": "Symbiosis",
+  "skill.ned.teleportation": "Teleportation",
+  "skill.ned.tentacle": "tentacle",
+  "skill.ned.thunderthorn_shield": "Thunderthorn Shield",
+  "skill.ned.timid": "Timid",
+  "skill.ned.trail_of_flames": "Trail Of Flames",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "oracle.ned.tip.pace_1": "You came into the world unnoticed.",
+  "oracle.ned.tip.pace_2": "You made a connection with the world.",
+  "oracle.ned.tip.pace_3": "Your story is becoming known.",
+  "oracle.ned.tip.pace_4": "You're connected to the world.",
+  "oracle.ned.tip.pace_5": "You've brought a lot of karma into this world.",
+  "oracle.ned.tip.pace_6": "The gods have noticed you.",
+  "oracle.ned.tip.pace_7": "The gods are watching you.",
+  "oracle.ned.tip.pace_8": "The gods are watching you all the time.",
+  "oracle.ned.tip.start": "The gods have sent an oracle.",
+  "oracle.ned.tip.bad_end": "You have failed to fulfill the demands of the oracle. The gods will punish you.",
+  "oracle.ned.tip.happy_end": "You have fulfilled the oracle. The gods are pleased with you.",
+  "oracle.ned.CollectionItems.tip": "You need to collect {1} {2} in {0} days",
+
+  "damage_type.ned.gong": "Gong",
+  "damage_type.ned.shang": "Shang",
+  "damage_type.ned.jue": "Jue",
+  "damage_type.ned.zhi": "Zhi",
+  "damage_type.ned.yu": "Yu",
+  "damage_type.ned.null": "null",
+
+  "item.ned.sword_of_sound": "Sword of Sound",
+  "tooltip.ned.sword_of_sound": "Left clicking to hit a creature causes different types of damage",
+  "tooltip.ned.sword_of_sound.damage_type": "The current damage type is:",
+
+
+
+
+  "tooltip.ned.quality": "Quality",
+  "tooltip.ned.quality.ordinary_and_plain": "Ordinary and Plain",
+  "tooltip.ned.quality.finely_crafted": "Finely Crafted",
+  "tooltip.ned.quality.rare_treasure": "Rare Treasure",
+  "tooltip.ned.quality.exceptional": "Exceptional",
+  "tooltip.ned.quality.flawless_creation": "Flawless Creation",
+  "tooltip.ned.quality.magic_infused": "Magic Infused",
+  "tooltip.ned.quality.celestial_brilliance": "Celestial Brilliance",
+  "tooltip.ned.quality.blade_of_starfall": "Blade of Starfall",
+  "tooltip.ned.quality.whisper_of_abyss": "Whisper of Abyss",
+  "tooltip.ned.quality.apocalypse_flame": "Apocalypse Flame"
+
+
+}
