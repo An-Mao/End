@@ -18,7 +18,7 @@ import nws.dev.core.math._MathCDT;
 import nws.mc.cores.render.DrawImage;
 import nws.mc.ned.NED;
 import nws.mc.ned.config.client.ClientConfig;
-import nws.mc.ned.register.DataRegister;
+import nws.mc.ned.register.data.DataRegister;
 import org.joml.Quaternionf;
 
 import java.awt.geom.Point2D;

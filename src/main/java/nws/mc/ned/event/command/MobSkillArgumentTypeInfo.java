@@ -1,4 +1,4 @@
-package nws.mc.ned.mob$skill;
+package nws.mc.ned.event.command;
 
 import com.google.gson.JsonObject;
 import net.minecraft.commands.CommandBuildContext;

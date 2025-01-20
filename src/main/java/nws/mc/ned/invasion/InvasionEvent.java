@@ -13,7 +13,7 @@ import net.neoforged.neoforge.event.tick.LevelTickEvent;
 import nws.mc.ned.NED;
 import nws.mc.ned.config.invasion.InvasionConfig;
 import nws.mc.ned.config.invasion.InvasionMobList;
-import nws.mc.ned.register.DataRegister;
+import nws.mc.ned.register.data.DataRegister;
 
 @EventBusSubscriber(modid = NED.MOD_ID)
 public class InvasionEvent extends InvasionCDT{

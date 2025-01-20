@@ -6,11 +6,22 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import nws.mc.ned.mob$skill.MobSkill;
 
 public class IntrinsicQualityMobSkill extends MobSkill {
+    private int tick = 60;
     public IntrinsicQualityMobSkill(String id) {
         super(id);
     }
 
+    @Override
+    public void loadConfig(CompoundTag dat) {
+        tick = dat.getInt("tick");
+    }
 
+    @Override
+    public CompoundTag getDefaultConfig() {
+        CompoundTag dat = super.getDefaultConfig();
+        dat.putInt("tick",tick);
+        return dat;
+    }
     @Override
     public void livingIncomingDamage(LivingIncomingDamageEvent event, CompoundTag dat) {
         if (dat.getBoolean("noDamage")){
@@ -22,7 +33,7 @@ public class IntrinsicQualityMobSkill extends MobSkill {
     @Override
     public void entityTickPre(EntityTickEvent.Pre event, CompoundTag dat) {
         int t = dat.getInt("tick");
-        if (t > 60){
+        if (t > tick){
             dat.putInt("tick",0);
             dat.putBoolean("noDamage",true);
         }else {

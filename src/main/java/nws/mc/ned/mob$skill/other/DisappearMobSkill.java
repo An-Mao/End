@@ -6,11 +6,23 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import nws.mc.ned.mob$skill.MobSkill;
 
 public class DisappearMobSkill extends MobSkill {
+    private int time = 1200;
     //一段时间后消失
     public DisappearMobSkill(String id) {
         super(id);
     }
 
+    @Override
+    public void loadConfig(CompoundTag dat) {
+        time = dat.getInt("time");
+    }
+
+    @Override
+    public CompoundTag getDefaultConfig() {
+        CompoundTag dat = super.getDefaultConfig();
+        dat.putInt("time",time);
+        return dat;
+    }
     @Override
     public void entityJoinLevel(EntityJoinLevelEvent event, CompoundTag dat) {
         if (!dat.getBoolean("NoFirstJoin")) {
@@ -21,7 +33,7 @@ public class DisappearMobSkill extends MobSkill {
 
     @Override
     public void entityTickPre(EntityTickEvent.Pre event, CompoundTag dat) {
-        if (event.getEntity().level().getGameTime() - dat.getLong("JoinTime") > 1200){
+        if (event.getEntity().level().getGameTime() - dat.getLong("JoinTime") > time){
             event.getEntity().discard();
         }
     }

@@ -1,6 +1,7 @@
-package nws.mc.ned.mob$skill;
+package nws.mc.ned.event.command;
 
 import net.minecraft.core.Holder;
+import nws.mc.ned.mob$skill.MobSkill;
 
 public class MobSkillInput {
     private final Holder<MobSkill> skill;

@@ -1,8 +1,5 @@
 package nws.mc.ned.mob$skill;
 
-import com.mojang.brigadier.Message;
-import com.mojang.brigadier.StringReader;
-import com.mojang.brigadier.context.StringRange;
 import com.mojang.brigadier.suggestion.Suggestion;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -15,10 +12,9 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import nws.dev.core.array._Array3D;
 import nws.mc.ned.config.Configs;
-import nws.mc.ned.config.general.GeneralConfig;
 import nws.mc.ned.data$pack.MobSkillDataPacks;
-import nws.mc.ned.register.DataRegister;
-import nws.mc.ned.register.MobSkillData;
+import nws.mc.ned.register.data.DataRegister;
+import nws.mc.ned.register.data.MobSkillData;
 import nws.mc.ned.register.net.NetRegister;
 import nws.mc.net.core.NetCore;
 import nws.mc.net.core.NetPack;
@@ -49,7 +45,6 @@ public class MobSkillHelper {
         }
         return false;
     }
-
 
     public static boolean isEnable(Level level, String key) {
         return level.registryAccess().holderOrThrow(MobSkillDataPacks.getId(key)).value().enable();

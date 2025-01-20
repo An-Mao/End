@@ -1,4 +1,4 @@
-package nws.mc.ned.mob$skill;
+package nws.mc.ned.event.command;
 
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.arguments.ArgumentType;
@@ -8,13 +8,15 @@ import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 import net.minecraft.commands.CommandBuildContext;
-import net.minecraft.commands.arguments.item.ItemInput;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import nws.mc.ned.NED;
+import nws.mc.ned.mob$skill.MobSkill;
+import nws.mc.ned.mob$skill.MobSkillHelper;
+import nws.mc.ned.mob$skill.MobSkillRegister;
 
 import java.util.Arrays;
 import java.util.Collection;

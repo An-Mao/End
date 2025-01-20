@@ -1,6 +1,6 @@
 {
-  "message.ned.invasion.pre": "================================&newLine Invasion Day &newLine Start Time:{0} &newLine Duration Time:{1} &newLine Waves:{2}",
-  "message.ned.invasion.start": "Invasion Start&newLineThe first wave is coming soon",
+  "message.ned.invasion.pre": "================================/n Invasion Day /n Start Time:{0} /n Duration Time:{1} /n Waves:{2}",
+  "message.ned.invasion.start": "Invasion Start/nThe first wave is coming soon",
   "message.ned.invasion.error_stop": "Invasion Error Stop",
   "message.ned.invasion.stop": "Invasion Stop",
   "message.ned.invasion.wave": "Now wave : {0} ",

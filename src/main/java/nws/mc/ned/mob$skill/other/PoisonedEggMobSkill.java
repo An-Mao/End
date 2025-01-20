@@ -13,18 +13,33 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import nws.mc.ned.mob$skill.MobSkill;
 
 public class PoisonedEggMobSkill extends MobSkill {
+    private int tick = 200;
+    private int distance = 10;
     public PoisonedEggMobSkill(String id) {
         super(id);
     }
 
     @Override
+    public void loadConfig(CompoundTag dat) {
+        tick = dat.getInt("tick");
+        distance = dat.getInt("distance");
+    }
+    @Override
+    public CompoundTag getDefaultConfig() {
+        CompoundTag dat = super.getDefaultConfig();
+        dat.putInt("tick",tick);
+        dat.putInt("distance",distance);
+        return dat;
+    }
+
+    @Override
     public void entityTickPre(EntityTickEvent.Pre event, CompoundTag dat) {
         int t = dat.getInt("tick");
-        if (t > 200) {
+        if (t > tick) {
             dat.putInt("tick",0);
             if (event.getEntity() instanceof LivingEntity livingEntity) {
                 //LivingEntity livingEntity = tickEvent.getEntity();
-                Player player = livingEntity.level().getNearestPlayer(livingEntity, 10);
+                Player player = livingEntity.level().getNearestPlayer(livingEntity, distance);
                 if (player != null) {
                     ItemStack potionStack = PotionContents.createItemStack(Items.SPLASH_POTION, Potions.POISON);
                     //PotionUtils.setPotion(new ItemStack(Items.SPLASH_POTION), Potions.POISON);

@@ -6,8 +6,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import nws.dev.core.json._JsonConfig;
 import nws.dev.core.math._Math;
+import nws.mc.cores.helper.entity.EntityHelper;
 import nws.mc.ned.NED;
-import nws.mc.ned.lib.EntityHelper;
 
 import java.util.ArrayList;
 import java.util.List;

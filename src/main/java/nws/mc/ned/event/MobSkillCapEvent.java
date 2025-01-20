@@ -14,8 +14,8 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import nws.mc.ned.NED;
 import nws.mc.ned.config.Configs;
 import nws.mc.ned.mob$skill.MobSkillHelper;
-import nws.mc.ned.register.DataRegister;
-import nws.mc.ned.register.MobSkillData;
+import nws.mc.ned.register.data.DataRegister;
+import nws.mc.ned.register.data.MobSkillData;
 
 @EventBusSubscriber(modid = NED.MOD_ID)
 public class MobSkillCapEvent {

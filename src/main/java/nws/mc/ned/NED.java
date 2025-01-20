@@ -10,7 +10,7 @@ import nws.mc.ned.register.effect.EffectRegister;
 import nws.mc.ned.mob$skill.MobSkillRegister;
 import nws.mc.ned.register.item.ItemReg;
 import nws.mc.ned.register.net.NetRegister;
-import nws.mc.ned.register.DataRegister;
+import nws.mc.ned.register.data.DataRegister;
 
 @Mod(NED.MOD_ID)
 public class NED

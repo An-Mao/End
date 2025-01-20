@@ -8,21 +8,39 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import nws.mc.ned.mob$skill.MobSkill;
 
 public class IgniteMobSkill extends MobSkill {
+    private int tick = 100;
+    private int tick2 = 20;
+    private int max = 4;
     public IgniteMobSkill(String id) {
         super(id);
     }
 
     @Override
+    public void loadConfig(CompoundTag dat) {
+        tick = dat.getInt("tick");
+        tick2 = dat.getInt("tick2");
+        max = dat.getInt("max");
+    }
+
+    @Override
+    public CompoundTag getDefaultConfig() {
+        CompoundTag dat = super.getDefaultConfig();
+        dat.putInt("tick",tick);
+        dat.putInt("tick2",tick2);
+        dat.putInt("max",max);
+        return dat;
+    }
+    @Override
     public void entityTickPre(EntityTickEvent.Pre event, CompoundTag dat) {
         if (event.getEntity() instanceof LivingEntity livingEntity) {
             int tick = dat.getInt("tick");
-            if (tick > 100) {
+            if (tick > this.tick) {
                 int t2 = dat.getInt("tick2");
-                if (t2 > 20) {
+                if (t2 > this.tick2) {
                     dat.putInt("tick2", 0);
                     int a = dat.getInt("a");
                     summonExplosion(livingEntity, a);
-                    if (a >= 4) {
+                    if (a >= max) {
                         dat.putInt("tick", 0);
                     } else {
                         dat.putInt("a", a + 1);
@@ -42,7 +60,7 @@ public class IgniteMobSkill extends MobSkill {
         double x = livingEntity.getX();
         double y = livingEntity.getY();
         double z = livingEntity.getZ();
-        for (int a = 0;a < 4;a++){
+        for (int a = 0;a < max;a++){
             summonExplosion(livingEntity,x,y,z,a);
         }
     }
@@ -64,6 +82,6 @@ public class IgniteMobSkill extends MobSkill {
         explosion3.explode();
     }
     public Explosion getExplosion(LivingEntity livingEntity,double x,double y, double z) {
-        return new Explosion(livingEntity.level(), livingEntity, x , y, z , 1.0f, false, Explosion.BlockInteraction.KEEP);
+        return new Explosion(livingEntity.level(), livingEntity, x , y, z , 1.0f, true, Explosion.BlockInteraction.KEEP);
     }
 }

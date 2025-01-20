@@ -3,6 +3,7 @@ package nws.mc.ned.data$pack;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import nws.mc.ned.NED;
+import nws.mc.ned.mob$skill.MobSkill;
 
 import java.util.HashMap;
 
@@ -12,6 +13,7 @@ public class MobSkillDataPacks {
 
     private static HashMap<String, MobSkillDataPack> initData() {
         HashMap<String, MobSkillDataPack> data = new HashMap<>();
+        /*
         data.put("chase_away", new MobSkillDataPack(false));
         data.put("corrosion", new MobSkillDataPack(false));
         data.put("frost_trail", new MobSkillDataPack(false));
@@ -31,10 +33,13 @@ public class MobSkillDataPacks {
         data.put("swirl", new MobSkillDataPack(false));
         data.put("teleportation", new MobSkillDataPack(false));
         data.put("tentacle", new MobSkillDataPack(false));
+
+         */
+
         return data;
     }
-    public static MobSkillDataPack getData(String id) {
-        return DATA.getOrDefault(id, new MobSkillDataPack());
+    public static MobSkillDataPack getData(MobSkill mobSkill) {
+        return DATA.getOrDefault(mobSkill.getId(), new MobSkillDataPack(mobSkill.getDefaultConfig()));
     }
     public static ResourceKey<MobSkillDataPack> getId(String id) {
         if (!IDS.containsKey(id)) IDS.put(id, ResourceKey.create(DataPackReg.MOB_SKILL_KEY, ResourceLocation.fromNamespaceAndPath(NED.MOD_ID, id)));

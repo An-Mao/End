@@ -5,9 +5,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import nws.mc.cores.helper.entity.EntityHelper;
 import nws.mc.ned.NED;
 import nws.mc.ned.config.damage_scale.DamageScaleConfig;
-import nws.mc.ned.lib.EntityHelper;
 
 @EventBusSubscriber(modid = NED.MOD_ID)
 public class DamageScaleEvent {

@@ -7,17 +7,28 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import nws.mc.ned.mob$skill.MobSkill;
 
 public class StealMobSkill extends MobSkill {
+    private double damageScale = 0.1;
     public StealMobSkill(String id) {
         super(id);
     }
 
+    @Override
+    public void loadConfig(CompoundTag dat) {
+        damageScale = dat.getDouble("damageScale");
+    }
+    @Override
+    public CompoundTag getDefaultConfig() {
+        CompoundTag dat = super.getDefaultConfig();
+        dat.putDouble("damageScale",damageScale);
+        return dat;
+    }
 
     @Override
     public void livingDamagePost(LivingDamageEvent.Post event, CompoundTag dat) {
         if (event.getSource().getEntity() instanceof ServerPlayer serverPlayer){
             ItemStack itemStack = serverPlayer.getMainHandItem();
             if (itemStack != ItemStack.EMPTY && itemStack.isDamageableItem()){
-                itemStack.setDamageValue((int) (itemStack.getDamageValue()+itemStack.getMaxDamage()*0.1));
+                itemStack.setDamageValue((int) (itemStack.getDamageValue()+itemStack.getMaxDamage()*damageScale));
             }
         }
     }

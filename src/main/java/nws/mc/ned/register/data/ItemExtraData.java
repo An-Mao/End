@@ -1,4 +1,4 @@
-package nws.mc.ned.register;
+package nws.mc.ned.register.data;
 
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;

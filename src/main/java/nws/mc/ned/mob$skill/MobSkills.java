@@ -37,6 +37,7 @@ public class MobSkills extends MobSkillRegister{
             String s = mobSkill.getId();
             MobSkillDataPack dataPack = registryAccess.holderOrThrow(MobSkillDataPacks.getId(s)).value();
             if (dataPack.enable()){
+                mobSkill.loadDataPack(dataPack.data());
                 if (!strings.contains(s)) {
                     strings.add(s);
                     if (dataPack.weight() < 0) throw new IllegalArgumentException("error: weight < 0 in " + s);

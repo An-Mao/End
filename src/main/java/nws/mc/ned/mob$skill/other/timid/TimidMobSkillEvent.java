@@ -6,8 +6,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
 import nws.mc.ned.NED;
-import nws.mc.ned.register.DataRegister;
-import nws.mc.ned.register.ItemExtraData;
+import nws.mc.ned.register.data.DataRegister;
+import nws.mc.ned.register.data.ItemExtraData;
 
 @EventBusSubscriber(modid = NED.MOD_ID)
 public class TimidMobSkillEvent {

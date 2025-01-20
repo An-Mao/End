@@ -11,25 +11,46 @@ import nws.mc.cores.helper.attribute.AttributeHelper;
 import nws.mc.ned.mob$skill.MobSkill;
 
 public class SearingShieldMobSkill extends MobSkill {
+    private int tick = 200;
+    private double attackSpeed = 0.3D;
+    private double attackDamage = 0.7D;
+    private float damageBase = 0.5F;
+    private float damageScale = 0.2F;
     public SearingShieldMobSkill(String id) {
         super(id);
     }
 
+    @Override
+    public void loadConfig(CompoundTag dat) {
+        tick = dat.getInt("tick");
+        attackSpeed = dat.getDouble("attackSpeed");
+        attackDamage = dat.getDouble("attackDamage");
+        damageBase = dat.getFloat("damageBase");
+        damageScale = dat.getFloat("damageScale");
+    }
+    @Override
+    public CompoundTag getDefaultConfig() {
+        CompoundTag dat = super.getDefaultConfig();
+        dat.putInt("tick",tick);
+        dat.putDouble("attackSpeed",attackSpeed);
+        dat.putDouble("attackDamage",attackDamage);
+        dat.putFloat("damageBase",damageBase);
+        dat.putFloat("damageScale",damageScale);
+        return dat;
+    }
 
     @Override
     public void livingDamagePre(LivingDamageEvent.Pre event, CompoundTag dat) {
         if (!event.getSource().typeHolder().is(DamageTypes.IN_FIRE.location())){
             if (event.getSource().getEntity() instanceof ServerPlayer serverPlayer){
-                int r = _Math.RD.getIntRandomNumber(1,3);
-                if (r == 1) {
-                    AttributeHelper.setTempAttribute(serverPlayer, Attributes.ATTACK_DAMAGE.value(),ATTRIBUTE_SKILL_ATTACK_DAMAGE,-0.7D, AttributeModifier.Operation.ADD_VALUE,200);
-                }else if (r == 2){
-                    AttributeHelper.setTempAttribute(serverPlayer,Attributes.ATTACK_SPEED.value(),ATTRIBUTE_SKILL_ATTACK_SPEED,-0.3D,AttributeModifier.Operation.ADD_VALUE,200);
-                }else {
-                    serverPlayer.hurt(event.getEntity().damageSources().inFire(),event.getNewDamage() * 0.5F);
-                }
+                    AttributeHelper.setTempAttribute(serverPlayer, Attributes.ATTACK_DAMAGE.value(),ATTRIBUTE_SKILL_ATTACK_DAMAGE,-attackDamage, AttributeModifier.Operation.ADD_VALUE,tick);
+
+                    AttributeHelper.setTempAttribute(serverPlayer,Attributes.ATTACK_SPEED.value(),ATTRIBUTE_SKILL_ATTACK_SPEED,-attackSpeed,AttributeModifier.Operation.ADD_VALUE,tick);
+
+                    serverPlayer.hurt(event.getEntity().damageSources().inFire(),event.getNewDamage() * damageBase);
+
             }
-            event.setNewDamage(event.getNewDamage() * 0.2F);
+            event.setNewDamage(event.getNewDamage() * damageScale);
         }
     }
 }

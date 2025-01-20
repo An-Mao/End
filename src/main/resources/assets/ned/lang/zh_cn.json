@@ -1,7 +1,7 @@
 {
   "nws.mc.neko_end": "猫艺：终焉",
-  "message.ned.invasion.pre": "================================&newLine侵入 &newLine当前时间：{0}&newLine开始时间：{1} &newLine持续时间：{2} &newLine怪物波数：{3}",
-  "message.ned.invasion.start": "侵入开始&newLine第一波即将到来",
+  "message.ned.invasion.pre": "================================/n侵入 /n当前时间：{0}/n开始时间：{1} /n持续时间：{2} /n怪物波数：{3}",
+  "message.ned.invasion.start": "侵入开始/n第一波即将到来",
   "message.ned.invasion.error_stop": "侵入异常结束",
   "message.ned.invasion.stop": "侵入停止",
   "message.ned.invasion.wave": "当前波数： {0} ",

@@ -1,4 +1,4 @@
-package nws.mc.ned.register;
+package nws.mc.ned.register.data;
 
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;
@@ -19,9 +19,7 @@ import net.neoforged.neoforge.event.entity.living.*;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import nws.dev.core.array._Array3D;
 import nws.dev.core.bytes._Byte;
-import nws.dev.core.math._Math;
 import nws.mc.ned.config.Configs;
-import nws.mc.ned.config.general.GeneralConfig;
 import nws.mc.ned.mob$skill.MobSkill;
 import nws.mc.ned.mob$skill.MobSkillRegister;
 import nws.mc.ned.mob$skill.MobSkills;

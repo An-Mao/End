@@ -41,7 +41,7 @@ public class DataPackReg {
                 .add(DataPackReg.MOB_SKILL_KEY, DataPackReg::regMobSkill);
     }
     private static void regMobSkill(BootstrapContext<MobSkillDataPack> bootstrap) {
-        MobSkills.REGISTRY.forEach(mobSkill -> bootstrap.register(MobSkillDataPacks.getId(mobSkill.getId()),MobSkillDataPacks.getData(mobSkill.getId())));
+        MobSkills.REGISTRY.forEach(mobSkill -> bootstrap.register(MobSkillDataPacks.getId(mobSkill.getId()),MobSkillDataPacks.getData(mobSkill)));
     }
     private static void regMobSkillConfig(BootstrapContext<MobSkillConfigDataPack> bootstrap) {
         bootstrap.register(MOB_SKILL_CONFIG_DATA_PACK_RESOURCE_KEY,MobSkillConfigDataPack.DEFAULT);

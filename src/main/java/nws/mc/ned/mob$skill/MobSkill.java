@@ -1,8 +1,10 @@
 package nws.mc.ned.mob$skill;
 
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import nws.mc.ned.NED;
+import nws.mc.ned.data$pack.MobSkillDataPack;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,5 +48,14 @@ public abstract class MobSkill extends MobSkillCDT implements MobSkillInterface,
         } catch (IOException e) {
             return ResourceLocation.fromNamespaceAndPath(NED.MOD_ID, "textures/skill/null_skill.png");
         }
+    }
+
+    public void loadDataPack(CompoundTag dat){
+        if (dat == null || dat.isEmpty()) return;
+        loadConfig(dat);
+    }
+    public void loadConfig(CompoundTag dat){}
+    public CompoundTag getDefaultConfig(){
+        return new CompoundTag();
     }
 }

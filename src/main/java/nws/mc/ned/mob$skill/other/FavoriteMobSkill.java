@@ -5,15 +5,29 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import nws.mc.ned.mob$skill.MobSkill;
 
 public class FavoriteMobSkill extends MobSkill {
+    private int distance = 7;
+    private float damageScale = 0.2F;
     public FavoriteMobSkill(String id) {
         super(id);
     }
 
+    @Override
+    public void loadConfig(CompoundTag dat) {
+        distance = dat.getInt("distance");
+        damageScale = dat.getFloat("damageScale");
+    }
 
     @Override
+    public CompoundTag getDefaultConfig() {
+        CompoundTag dat = super.getDefaultConfig();
+        dat.putInt("distance",distance);
+        dat.putFloat("damageScale",damageScale);
+        return dat;
+    }
+    @Override
     public void livingDamagePre(LivingDamageEvent.Pre event, CompoundTag dat) {
-        if (event.getSource().getEntity() != null && event.getEntity().distanceTo(event.getSource().getEntity()) > 7) {
-            event.setNewDamage(event.getNewDamage() * 0.2F);
+        if (event.getSource().getEntity() != null && event.getEntity().distanceTo(event.getSource().getEntity()) > distance) {
+            event.setNewDamage(event.getNewDamage() * damageScale);
         }
     }
 }

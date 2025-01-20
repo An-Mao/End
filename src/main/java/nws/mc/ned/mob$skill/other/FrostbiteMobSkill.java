@@ -10,17 +10,32 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import nws.mc.ned.mob$skill.MobSkill;
 
 public class FrostbiteMobSkill extends MobSkill {
+    private int tick = 200;
+    private int distance = 15;
     public FrostbiteMobSkill(String id) {
         super(id);
     }
 
     @Override
+    public void loadConfig(CompoundTag dat) {
+        tick = dat.getInt("tick");
+        distance = dat.getInt("distance");
+    }
+
+    @Override
+    public CompoundTag getDefaultConfig() {
+        CompoundTag dat = super.getDefaultConfig();
+        dat.putInt("tick",tick);
+        dat.putInt("distance",distance);
+        return dat;
+    }
+    @Override
     public void entityTickPre(EntityTickEvent.Pre event, CompoundTag dat) {
         int tick = dat.getInt("tick");
-        if (tick > 200) {
+        if (tick > this.tick) {
             dat.putInt("tick",0);
             if (event.getEntity() instanceof LivingEntity livingEntity) {
-                Player player = livingEntity.level().getNearestPlayer(livingEntity, 15);
+                Player player = livingEntity.level().getNearestPlayer(livingEntity, distance);
                 if (player != null) {
                     Level level = player.level();
                     BlockPos playerPos = player.blockPosition();
