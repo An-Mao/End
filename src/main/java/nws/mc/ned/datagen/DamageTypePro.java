@@ -6,7 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.damagesource.DamageType;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
-import nws.mc.ned.NED;
+import nws.mc.ned.NekoEnd;
 import nws.mc.ned.register.damage$type.DamageTypes;
 
 import java.util.Set;
@@ -22,6 +22,6 @@ public class DamageTypePro extends DatapackBuiltinEntriesProvider {
                         .add(Registries.DAMAGE_TYPE, bootstrap -> bootstrap.register(DamageTypes.JUE, new DamageType(DamageTypes.JUE.location().toLanguageKey(),0)))
                         .add(Registries.DAMAGE_TYPE, bootstrap -> bootstrap.register(DamageTypes.ZHI, new DamageType(DamageTypes.ZHI.location().toLanguageKey(),0)))
                         .add(Registries.DAMAGE_TYPE, bootstrap -> bootstrap.register(DamageTypes.YU, new DamageType(DamageTypes.YU.location().toLanguageKey(),0)))
-                , Set.of(NED.MOD_ID));
+                , Set.of(NekoEnd.MOD_ID));
     }
 }

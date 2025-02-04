@@ -9,13 +9,13 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
-import nws.mc.ned.NED;
+import nws.mc.ned.NekoEnd;
 import nws.mc.ned.config.general.GeneralConfig;
 import org.joml.Matrix4f;
 
-@EventBusSubscriber(modid = NED.MOD_ID, bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
+@EventBusSubscriber(modid = NekoEnd.MOD_ID, bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
 public class EyeRender {
-    private static final ResourceLocation EYE_LOCATION = ResourceLocation.tryBuild(NED.MOD_ID, "textures/eye/eye.png");
+    private static final ResourceLocation EYE_LOCATION = ResourceLocation.tryBuild(NekoEnd.MOD_ID, "textures/eye/eye.png");
 
 
 

@@ -13,10 +13,10 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import nws.mc.ned.NED;
-import nws.mc.ned.mob$skill.MobSkill;
-import nws.mc.ned.mob$skill.MobSkillHelper;
-import nws.mc.ned.mob$skill.MobSkillRegister;
+import nws.mc.ned.NekoEnd;
+import nws.mc.ned.mob$enchant.skill.MobSkill;
+import nws.mc.ned.mob$enchant.skill.MobSkillHelper;
+import nws.mc.ned.mob$enchant.skill.MobSkillRegister;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -46,8 +46,10 @@ public class MobSkillArgument implements ArgumentType<MobSkillInput> {
     }
     @Override
     public <S> CompletableFuture<Suggestions> listSuggestions(CommandContext<S> context, SuggestionsBuilder builder) {
-        String in = context.getInput().replace("/"+NED.MOD_ID+" addSkill ","");
+        String in = context.getInput().replace("/"+ NekoEnd.MOD_ID+" add_mob_skill ","");
+        //System.out.println(in);
         MobSkillHelper.getSkills(builder,in);
+
         return builder.buildFuture();
     }
 

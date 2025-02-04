@@ -2,8 +2,8 @@ package nws.mc.ned.data$pack;
 
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import nws.mc.ned.NED;
-import nws.mc.ned.mob$skill.MobSkill;
+import nws.mc.ned.NekoEnd;
+import nws.mc.ned.mob$enchant.skill.MobSkill;
 
 import java.util.HashMap;
 
@@ -42,7 +42,7 @@ public class MobSkillDataPacks {
         return DATA.getOrDefault(mobSkill.getId(), new MobSkillDataPack(mobSkill.getDefaultConfig()));
     }
     public static ResourceKey<MobSkillDataPack> getId(String id) {
-        if (!IDS.containsKey(id)) IDS.put(id, ResourceKey.create(DataPackReg.MOB_SKILL_KEY, ResourceLocation.fromNamespaceAndPath(NED.MOD_ID, id)));
+        if (!IDS.containsKey(id)) IDS.put(id, ResourceKey.create(DataPackReg.MOB_SKILL_KEY, ResourceLocation.fromNamespaceAndPath(NekoEnd.MOD_ID, id)));
         return IDS.get(id);
     }
 

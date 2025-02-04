@@ -4,9 +4,9 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
-import nws.mc.ned.NED;
+import nws.mc.ned.NekoEnd;
 
-@EventBusSubscriber(modid = NED.MOD_ID)
+@EventBusSubscriber(modid = NekoEnd.MOD_ID)
 public class HurtDownEvent {
     @SubscribeEvent
     public static void onHurt(LivingDamageEvent.Pre event){

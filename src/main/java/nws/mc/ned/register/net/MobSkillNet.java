@@ -38,11 +38,6 @@ public class MobSkillNet extends NetHandle {
                     CompoundTag data = mobSkillData.getCompoundTag();
                     data.putInt("entity", dat.getInt("entity"));
                     NetCore.sendToPlayer(NetPack.createClientPack(data, NetRegister.MOB_SKILL.get()),sender);
-
-
-
-                    //blockEntity.getData(DataRegister.MOB_SKILLS).handlePacket(dat);
-                    //blockEntity.handlePacket(dat);
                 }
             }
         }

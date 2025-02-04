@@ -147,7 +147,6 @@ public class InvasionData extends InvasionCDT {
 
 
 
-
     public void saveNBTData(CompoundTag nbt)
     {
         CompoundTag tag = new CompoundTag();

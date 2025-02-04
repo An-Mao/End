@@ -1,6 +1,9 @@
 package nws.mc.ned.config.invasion;
 
+import java.util.HashMap;
+
 public class InvasionConfigData {
+    private boolean enable;
     private boolean immunityNonPlayerDamage;
     private int MinDayInterval;
     private int MaxDayInterval;
@@ -9,6 +12,23 @@ public class InvasionConfigData {
     private int DayTime;
     private int Waves;
     private int MobSingleLimit;
+    private HashMap<String,Integer> data = new HashMap<>();
+
+    public void setData(HashMap<String,Integer> data) {
+        this.data = data;
+    }
+
+    public HashMap<String,Integer> getData() {
+        return data;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
+    }
 
     public boolean isImmunityNonPlayerDamage() {
         return immunityNonPlayerDamage;

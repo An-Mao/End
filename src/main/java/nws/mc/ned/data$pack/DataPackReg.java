@@ -9,18 +9,18 @@ import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
-import nws.mc.ned.NED;
-import nws.mc.ned.mob$skill.MobSkills;
+import nws.mc.ned.NekoEnd;
+import nws.mc.ned.mob$enchant.skill.MobSkills;
 import nws.mc.ned.register.damage$type.DamageTypes;
 
 
-@EventBusSubscriber(modid = NED.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = NekoEnd.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class DataPackReg {
-    public static final ResourceKey<Registry<MobSkillDataPack>> MOB_SKILL_KEY = ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(NED.MOD_ID, "skill/mob.skill"));
-    public static final ResourceKey<Registry<MobSkillConfigDataPack>> MOB_SKILL_Config = ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(NED.MOD_ID, "skill/config"));
+    public static final ResourceKey<Registry<MobSkillDataPack>> MOB_SKILL_KEY = ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(NekoEnd.MOD_ID, "skill/mob.skill"));
+    public static final ResourceKey<Registry<MobSkillConfigDataPack>> MOB_SKILL_Config = ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(NekoEnd.MOD_ID, "skill/config"));
 
 
-    public static final ResourceKey<MobSkillConfigDataPack> MOB_SKILL_CONFIG_DATA_PACK_RESOURCE_KEY = ResourceKey.create(DataPackReg.MOB_SKILL_Config, ResourceLocation.fromNamespaceAndPath(NED.MOD_ID, "mob.skill.config"));
+    public static final ResourceKey<MobSkillConfigDataPack> MOB_SKILL_CONFIG_DATA_PACK_RESOURCE_KEY = ResourceKey.create(DataPackReg.MOB_SKILL_Config, ResourceLocation.fromNamespaceAndPath(NekoEnd.MOD_ID, "mob.skill.config"));
     @SubscribeEvent
     public static void register(DataPackRegistryEvent.NewRegistry event) {
         event.dataPackRegistry(

@@ -7,7 +7,7 @@ import net.minecraft.world.entity.EntityType;
 import nws.dev.core.json._JsonConfig;
 import nws.dev.core.math._Math;
 import nws.mc.cores.helper.entity.EntityHelper;
-import nws.mc.ned.NED;
+import nws.mc.ned.NekoEnd;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,7 +88,7 @@ public class InvasionMobList extends _JsonConfig<Map<String,InvasionMobListData>
             }""";
     public List<InvasionMobListData> mobList = new ArrayList<>();
     public InvasionMobList(){
-        super(NED.CONFIG_DIR + "InvasionMobList.json", DEF,new TypeToken<>(){});
+        super(NekoEnd.CONFIG_DIR + "InvasionMobList.json", DEF,new TypeToken<>(){});
         dataToList();
     }
 

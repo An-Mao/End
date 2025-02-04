@@ -15,14 +15,17 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.event.entity.EntityInvulnerabilityCheckEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.entity.living.*;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import nws.dev.core.array._Array3D;
 import nws.dev.core.bytes._Byte;
 import nws.mc.ned.config.Configs;
-import nws.mc.ned.mob$skill.MobSkill;
-import nws.mc.ned.mob$skill.MobSkillRegister;
-import nws.mc.ned.mob$skill.MobSkills;
+import nws.mc.ned.mob$enchant.skill.MobSkill;
+import nws.mc.ned.mob$enchant.skill.MobSkillRegister;
+import nws.mc.ned.mob$enchant.skill.MobSkills;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
@@ -139,7 +142,7 @@ public class MobSkillData {
         for (int i = 0; i < s; i++) {
             MobSkill mobSkill = MobSkills.getRandomSkill();
             //System.out.println(mobSkill);
-            if (mobSkill != null) giveNewSkill(MobSkills.getRandomSkill());
+            if (mobSkill != null && mobSkill.canAdd(skillData.getAs())) giveNewSkill(MobSkills.getRandomSkill());
         }
 
     }

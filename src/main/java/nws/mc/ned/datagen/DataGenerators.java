@@ -9,13 +9,13 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import nws.mc.ned.NED;
+import nws.mc.ned.NekoEnd;
 import nws.mc.ned.data$pack.DataPackReg;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = NED.MOD_ID,bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = NekoEnd.MOD_ID,bus = EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){
@@ -42,7 +42,7 @@ public class DataGenerators {
                 event.includeServer(),
                 (DataProvider.Factory<DatapackBuiltinEntriesProvider>) pOutput -> new DatapackBuiltinEntriesProvider(packOutput,event.getLookupProvider(),
                         DataPackReg.getBuilder(),
-                        Set.of(NED.MOD_ID))
+                        Set.of(NekoEnd.MOD_ID))
         ).getRegistryProvider();
 
     }
