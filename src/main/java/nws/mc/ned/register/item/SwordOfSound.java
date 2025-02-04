@@ -16,9 +16,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import nws.mc.cores.amlib.the$world.TheWorld;
+import nws.mc.ned.register.damage$type.DamageTypes;
 import nws.mc.ned.register.data.DataRegister;
 import nws.mc.ned.register.data.ItemExtraData;
-import nws.mc.ned.register.damage$type.DamageTypes;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;

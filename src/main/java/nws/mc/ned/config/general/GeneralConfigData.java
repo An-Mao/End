@@ -1,7 +1,5 @@
 package nws.mc.ned.config.general;
 
-import java.util.List;
-
 public class GeneralConfigData {
     private boolean renderEndEye;
 
